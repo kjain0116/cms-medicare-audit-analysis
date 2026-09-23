@@ -1,0 +1,65 @@
+# ============================================================
+# CMS Medicare IPPS — Audit Risk Analysis
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+.conda/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ---------- Secrets / local config ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Raw data ----------
+# The CMS IPPS source file is large and publicly downloadable.
+# Document the download link in README instead of committing it.
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+
+# Keep cleaned/exported CSVs (portfolio deliverables) in data/processed/
+# If any single export exceeds ~50 MB, ignore it here instead.
+
+# ---------- DuckDB ----------
+*.duckdb
+*.duckdb.wal
+*.db
+*.db-journal
+
+# ---------- Power BI ----------
+# .pbix is committed as a deliverable. Uncomment if it grows past 100 MB.
+# *.pbix
+*.pbix.bak
+.pbi/
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# ---------- Office temp / lock files ----------
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# ---------- Editors ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
